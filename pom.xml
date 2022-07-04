@@ -59,7 +59,7 @@
                         <manifest>
                             <addClasspath>true</addClasspath>
                             <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>nl.utwente.proverb.ProVerBMateApplication</mainClass>
+                            <mainClass>com.jdqc.aam.ActionAPIMonitor</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
