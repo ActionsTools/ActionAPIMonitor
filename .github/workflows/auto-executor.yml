@@ -63,4 +63,4 @@ jobs:
     - name: Run API Monitor
       run: |
         chmod 0755 ActionAPIMonitor-1.0-SNAPSHOT.jar
-        java -jar ActionAPIMonitor-1.0-SNAPSHOT.jar
+        java -jar ActionAPIMonitor-1.0-SNAPSHOT.jar --spring.profiles.active=auto
