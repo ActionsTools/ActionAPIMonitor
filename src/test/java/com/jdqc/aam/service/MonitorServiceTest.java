@@ -22,14 +22,12 @@ import com.jdqc.aam.domain.openapi.OpenAPI;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
 import javax.annotation.Resource;
 import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ActiveProfiles("localtest")
 @SpringBootTest
 class MonitorServiceTest {
 

@@ -19,13 +19,11 @@ package com.jdqc.aam.domain.aam;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 
 import static org.junit.jupiter.api.Assertions.*;
 
 import javax.annotation.Resource;
 
-@ActiveProfiles("localtest")
 @SpringBootTest
 class AAMConfigurationTest {
 

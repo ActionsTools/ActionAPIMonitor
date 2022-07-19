@@ -19,13 +19,11 @@ package com.jdqc.aam.service;
 import com.jdqc.aam.domain.aam.AAMConfiguration;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
 import static org.junit.jupiter.api.Assertions.*;
 
 import javax.annotation.Resource;
 import java.util.stream.Collectors;
 
-@ActiveProfiles("localtest")
 @SpringBootTest
 class GitHubServiceTest {
 
