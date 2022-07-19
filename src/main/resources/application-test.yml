@@ -1,0 +1,11 @@
+# Customized settings for ActionAPIMonitor
+aam:
+  # [Required] Set the domain of server here or use the GitHub Secret, see 'auto-executor'
+  server: https://api.github.com
+  github:
+    # [Optional] The token of user, will have rate limit if you do not provide it
+    token:
+    # [Optional] The repo of the project, typically no need to manually config it
+    repository:
+    # [Optional] the label that mark the issues as an API that needs to be monitored, default to 'auto'
+    label: auto
