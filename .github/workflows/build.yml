@@ -16,7 +16,7 @@ jobs:
 
       - name: Unit test
         run: | 
-          mvn -Daam.github.repository=${{github.repository}} -Daam.github.token=${{secrets.AAM_GITHUB_TOKEN}} test
+          mvn -Dspring.profiles.active=test -Daam.github.repository=${{github.repository}} -Daam.github.token=${{secrets.AAM_GITHUB_TOKEN}} test
 
       - name: Build with Maven
         run: mvn package -DskipTests
