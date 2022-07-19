@@ -47,4 +47,4 @@ jobs:
     - name: Run GitHubAPI Monitor
       run: |
         chmod 0755 ActionAPIMonitor-1.0-SNAPSHOT.jar
-        java -jar ActionAPIMonitor-1.0-SNAPSHOT.jar --spring.profiles.active=auto --aam.github.repository=${{github.repository}} --aam.github.token = ${{secret.AAM_GITHUB_TOKEN}} --aam.server=${{secrets.SERVERS_URL_GITHUB_DEMO}}
+        java -jar ActionAPIMonitor-1.0-SNAPSHOT.jar --spring.profiles.active=auto --aam.github.repository=${{github.repository}} --aam.github.token = ${{secrets.AAM_GITHUB_TOKEN}} --aam.server=${{secrets.SERVERS_URL_GITHUB_DEMO}}
