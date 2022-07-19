@@ -13,28 +13,11 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-package com.jdqc.aam;
+package com.jdqc.aam.exception;
 
-import com.jdqc.aam.controller.MonitoringController;
-import lombok.extern.log4j.Log4j2;
-import org.springframework.context.annotation.Profile;
-import org.springframework.stereotype.Component;
+public class InvalidAAMConfigException extends AAMException{
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-
-@Log4j2
-@Profile("auto")
-@Component
-public class AutoExecutor {
-
-    @Resource
-    private MonitoringController controller;
-
-    @PostConstruct
-    void execute(){
-        log.info("Starting Application");
-        controller.monitorGitHubIssues();
-        log.info("Closing Application");
+    public InvalidAAMConfigException(String msg){
+        super(msg);
     }
 }

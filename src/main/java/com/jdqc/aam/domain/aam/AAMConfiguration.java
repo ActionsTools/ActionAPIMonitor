@@ -13,28 +13,27 @@
    See the License for the specific language governing permissions and
    limitations under the License.
  */
-package com.jdqc.aam;
+package com.jdqc.aam.domain.aam;
 
-import com.jdqc.aam.controller.MonitoringController;
-import lombok.extern.log4j.Log4j2;
-import org.springframework.context.annotation.Profile;
+import lombok.Data;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
-import javax.annotation.PostConstruct;
-import javax.annotation.Resource;
-
-@Log4j2
-@Profile("auto")
+@Data
 @Component
-public class AutoExecutor {
+@ConfigurationProperties(prefix = "aam")
+public class AAMConfiguration {
 
-    @Resource
-    private MonitoringController controller;
+    private String server;
 
-    @PostConstruct
-    void execute(){
-        log.info("Starting Application");
-        controller.monitorGitHubIssues();
-        log.info("Closing Application");
+    private GitHub github;
+
+    @Data
+    public static class GitHub {
+        String token;
+
+        String repository;
+
+        String label = "auto";
     }
 }
