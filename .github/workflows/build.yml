@@ -14,6 +14,14 @@ jobs:
           java-version: '11'
           distribution: 'temurin'
 
+      - name: Cache local Maven repository
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+
       - name: Unit test
         run: | 
           mvn -Dspring.profiles.active=test -Daam.github.repository=${{github.repository}} -Daam.github.token=${{secrets.AAM_GITHUB_TOKEN}} test
